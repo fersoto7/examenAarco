@@ -1,0 +1,69 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.division{
+    width: 95%;
+    height:auto;
+    margin: auto;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px 0px black; 
+}
+.div1{
+    width: 90%;
+    margin: auto;
+    height: auto;
+}
+.div2{
+    width: 90%;
+    margin: auto;
+    height: auto;
+}
+.div3{
+    width: 90%;
+    margin: auto;
+    height:auto;
+}
+.titulo{
+    font-size: 18px;
+    text-align: center;
+}
+hr{
+    background: black;
+    width:80%;
+    margin: auto;
+}
+.contenido {
+    width: 80%;
+    display: inline-flex;
+    margin: auto;
+    margin-left:100px;
+}
+.conTit{
+    width: 20%;
+    margin: 15px;
+    display: inline-block;
+    font-size:15px;
+}
+.conInp{
+    width: 80%;
+    display: inline-block;
+    margin: 10px;
+    font-size:12px;
+}

@@ -1,0 +1,288 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Aarco";
+}
+
+<div class="division">
+    <form>
+        <div class="div1">
+            <div class="titulo">
+                <h3>Vehículo</h3>
+                <hr/>
+            </div>
+            <div class="contenido">
+                <div class="conTit">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">MARCA:</label>
+                </div>
+                <div class="conInp">
+                    <select required id="marca" onchange="subMarca();" class="form-select" aria-label="Default select example">
+                        <option value="0" selected>Selecciona una Marca</option>
+                        <option value="1">ACURA</option>
+                        <option value="2">ALFA ROMEO</option>
+                        <option value="3">AUDI</option>
+                        <option value="4">BAIC</option>
+                        <option value="5">BMW</option>
+                    </select>
+                </div>
+            </div>
+            <!--SubMarca--> 
+            <div class="contenido">
+                <div class="conTit">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">SUBMARCA:</label>
+                </div>
+                <div id="sinMarca" class="conInp" style="display: block;">
+                    <select required class="form-select" aria-label="Default select example">
+                        <option selected>Selecciona una SubMarca</option>
+                    </select>
+                </div>
+                <div id="marca1" class="conInp" style="display: none;">
+                    <select id="mar1" onchange="modelo();" class="form-select" aria-label="Default select example">
+                        <option value="0" selected>Selecciona una SubMarca</option>
+                        <option value="1">ILX</option>
+                        <option value="2">MDX</option>
+                        <option value="3">RDX</option>
+                        <option value="4">RL</option>
+                        <option value="5">RLX</option>
+                        <option value="6">TL</option>
+                        <option value="7">TLX</option>
+                        <option value="8">TSX</option>
+                        <option value="9">ZDX</option>
+                    </select>
+                </div>
+                <div id="marca2" class="conInp" style="display: none">
+                    <select id="mar2" class="form-select" aria-label="Default select example">
+                        <option value="0" selected>Selecciona una SubMarca</option>
+                        <option value="1">147</option>
+                        <option value="2">156</option>
+                        <option value="3">159</option>
+                        <option value="4">166</option>
+                        <option value="5">BRERA</option>
+                        <option value="6">GIULIETTA</option>
+                        <option value="7">GT</option>
+                        <option value="8">GTV</option>
+                        <option value="9">MITO</option>
+                        <option value="10">SPIDER</option>
+                    </select>
+                </div>
+                <div id="marca3" class="conInp" style="display: none">
+                    <select id="mar3" class="form-select" aria-label="Default select example">
+                        <option value="0" selected>Selecciona una SubMarca</option>
+                        <option value="1">A1</option>
+                        <option value="2">A3</option>
+                        <option value="3">A4</option>
+                        <option value="4">A5</option>
+                        <option value="5">A6</option>
+                        <option value="6">A7</option>
+                        <option value="7">A8</option>
+                        <option value="8">ALLROAD</option>
+                        <option value="9">Q2</option>
+                        <option value="10">Q3</option>
+                        <option value="11">Q5</option>
+                        <option value="12">Q7</option>
+                        <option value="13">Q8</option>
+                        <option value="14">R8</option>
+                        <option value="15">S3</option>
+                        <option value="16">S4</option>
+                        <option value="17">S5</option>
+                        <option value="18">S6</option>
+                        <option value="19">S7</option>
+                        <option value="20">S8</option>
+                        <option value="21">SPORT QUATTRO</option>
+                        <option value="22">TT</option>
+                        <option value="23">TTS</option>
+                    </select>
+                </div>
+                <div id="marca4" class="conInp" style="display: none">
+                    <select id="mar4" class="form-select" aria-label="Default select example">
+                        <option value="0" selected>Selecciona una SubMarca</option>
+                        <option value="1">BJ20</option>
+                        <option value="2">BJ40</option>
+                        <option value="3">D20</option>
+                        <option value="4">X25</option>
+                        <option value="5">X30</option>
+                        <option value="6">X35</option>
+                        <option value="7">X65</option>
+                    </select>
+                </div>
+                <div id="marca5" class="conInp" style="display: none">
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="0" selected>Selecciona una SubMarca</option>
+                        <option value="1">MINI COOPER</option>
+                        <option value="2">SERIE 1</option>
+                        <option value="3">SERIE 2</option>
+                        <option value="4">SERIE 3</option>
+                        <option value="5">SERIE 4</option>
+                        <option value="6">SERIE 5</option>
+                        <option value="7">SERIE 6</option>
+                        <option value="8">SERIE 7</option>
+                        <option value="9">SERIE 8</option>
+                        <option value="10">SERIE I</option>
+                        <option value="11">SERIE I3</option>
+                        <option value="12">SERIE I4</option>
+                        <option value="13">SERIE M</option>
+                        <option value="14">SERIE Z</option>
+                        <option value="15">X1</option>
+                        <option value="16">X2</option>
+                        <option value="17">X3</option>
+                        <option value="18">X4</option>
+                        <option value="19">X5</option>
+                        <option value="20">X6</option>
+                        <option value="21">X7</option>
+                        <option value="22">Z3</option>
+                        <option value="23">Z4</option>
+                        <option value="24">z8</option> 
+                    </select>
+                </div>
+            </div>
+            <!--Modelo-->
+            <div class="contenido">
+                <div class="conTit">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">MODELO:</label>
+                </div>
+                <div id="mod0" class="conInp">
+                    <select required class="form-select" aria-label="Default select example">
+                        <option value="0">Seleccione un modelo</option>
+                    </select> 
+                </div>
+                <div id="mod1" style="display: none;" class="conInp">
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="0">Seleccione un modelo</option>
+                        <option value="1">2007</option>
+                    </select> 
+                </div>
+                <div id="mod2" style="display: none;" class="conInp">
+                    <select class="form-select" aria-label="Default select example">
+                        <option value="0">Seleccione un modelo</option>
+                        <option value="1">2013</option>
+                    </select> 
+                </div>
+            </div>
+        </div>
+        <div class="div2">
+            <div class="titulo">
+                <h3>Domicilio</h3>
+                <hr />
+            </div>
+            <div class="contenido">
+                <div class="conTit">
+                    <label for="exampleDataList" class="form-label">CODIGO POSTAL:</label>
+                </div>
+                <div class="conInp">
+                    <input required class="form-control" type="number" placeholder="Codigo Postal" aria-label="default input example">
+                </div>
+            </div>
+            <div class="contenido">
+                <div class="conTit">
+                    <label for="staticEmail" class="col-sm-3 col-form-label">ESTADO:</label>
+                </div>
+                <div class="conInp">
+                    <input required class="form-control" type="text" disabled placeholder="Estado" aria-label="default input example">
+                </div>
+            </div>
+            <div class="contenido">
+                <div class="conTit">
+                    <label for="staticEmail" class="col-sm-3 col-form-label">MUNICIPIO:</label>
+                </div>
+                <div class="conInp">
+                    <input required class="form-control" type="text" disabled placeholder="Municipio" aria-label="default input example">
+                </div>
+            </div>
+            <div class="contenido">
+                <div class="conTit">
+                    <label for="staticEmail" class="col-sm-3 col-form-label">COLONIA:</label>
+                </div>
+                <div class="conInp">
+                    <input required  class="form-control" type="text" disabled placeholder="Colonia" aria-label="default input example">
+                </div>
+            </div>
+        </div>
+        <div class="div3">
+            <div class="titulo">
+                <h3>Persona</h3>
+                <hr />
+            </div>
+            <div class="contenido">
+                <div class="conTit">
+                    <label for="exampleDataList" class="form-label">FECHA NACIMIENTO:</label>
+                </div>
+                <div class="conInp">
+                    <input required class="form-control" type="date" placeholder="Default input" aria-label="default input example">
+                </div>
+            </div>
+            <div class="contenido">
+                <div class="conTit">
+                    <label for="staticEmail" class="col-sm-3 col-form-label">GENERO:</label>
+                </div>
+                <div class="conInp">
+                    <select required class="form-select" aria-label="Default select example">
+                        <option selected>Seleccione su genero</option>
+                        <option value="1">MASCULINO</option>
+                        <option value="2">FEMENINO</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="div1">
+            <div class="contenido">
+                <div class="conTit">
+                    <button class="btn btn-danger" type="submit">Cotizar</button>
+                </div>
+            </div>
+    </div>
+    </form>
+</div>
+<script>
+    function subMarca(){
+        var selectValue = document.getElementById("marca").value;
+        if(selectValue == 0){
+            document.getElementById('sinMarca').style.display = 'block';
+            document.getElementById('marca1').style.display = 'none';
+            document.getElementById('marca2').style.display = 'none';
+            document.getElementById('marca3').style.display= 'none';
+            document.getElementById('marca4').style.display= 'none';
+
+        }
+        if(selectValue == 1){
+            document.getElementById('sinMarca').style.display = 'none';
+            document.getElementById('marca1').style.display = 'block';
+            document.getElementById('marca2').style.display = 'none';
+            document.getElementById('marca3').style.display= 'none';
+            document.getElementById('marca4').style.display= 'none';
+        }
+        if(selectValue == 2){
+            document.getElementById('sinMarca').style.display = 'none';
+            document.getElementById('marca1').style.display = 'none';
+            document.getElementById('marca2').style.display = 'block';
+            document.getElementById('marca3').style.display= 'none';
+            document.getElementById('marca4').style.display= 'none';
+        }
+        if(selectValue == 3){
+            document.getElementById('sinMarca').style.display = 'none';
+            document.getElementById('marca1').style.display = 'none';
+            document.getElementById('marca2').style.display = 'none';
+            document.getElementById('marca3').style.display= 'block';
+            document.getElementById('marca4').style.display= 'none';
+        }
+        if(selectValue == 4){
+            document.getElementById('sinMarca').style.display = 'none';
+            document.getElementById('marca1').style.display = 'none';
+            document.getElementById('marca2').style.display = 'none';
+            document.getElementById('marca3').style.display= 'none';
+            document.getElementById('marca4').style.display= 'block';
+        }
+    }
+    function modelo(){
+        var modelo = document.getElementById("mar1").value;
+        if(modelo == 1){
+            document.getElementById('mod0').style.display='none';
+            document.getElementById('mod1').style.display='block';
+            document.getElementById('mod2').style.display='none';
+        }
+        if(modelo == 2){
+            document.getElementById('mod0').style.display='none';
+            document.getElementById('mod1').style.display='none';
+            document.getElementById('mod2').style.display='block';
+        }
+    }
+</script>
